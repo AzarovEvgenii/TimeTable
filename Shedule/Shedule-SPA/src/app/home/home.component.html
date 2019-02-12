@@ -1,0 +1,35 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="text-center">
+  
+      <!-- <img 
+        class="responsive"
+        data-src="holder.js/500x500/auto"
+        alt="500x500"
+        style="width: 900px; height: 500px;"
+        src="http://www.soyuzmash.ru/sites/default/files/styles/news_content_691/public/field/image/news/fvvgcg281015-900.jpg?itok=7PjPFYS4"
+        data-holder-rendered="true"
+      /> -->
+  </div>
+  <main *ngIf="!registerMode" role="main" class="inner cover text-center col md-1">
+    <h1 class="featurette-heading">
+      Чистый город.
+      <span class="text-muted">Приложение призванное изменить мир.</span>
+    </h1>
+    <p class="lead" style="font-size:30px">"Чистота — лучшая красота." - народная мудрость.</p>
+
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">
+        Зарегистрироваться
+      </button>
+      <button class="btn btn-info btn-lg">Узнать больше</button>
+    </div>
+  </main>
+
+  <div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <app-register (cancelRegister)="cancelRegisterMode()"> </app-register>
+      </div>
+    </div>
+  </div>
+</div>
